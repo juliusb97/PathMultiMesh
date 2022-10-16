@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://PathMultiMesh.gd" type="Script" id=1]
+[ext_resource path="res://rect.obj" type="ArrayMesh" id=2]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 0, 0, 17, 0, 0, -17, -0.0133719, 0, -7.95482, 0, 0, 0, -9.96097, 0, 9.46786, -16, 0, -24 ),
+"tilts": PoolRealArray( 0, 0 )
+}
+
+[sub_resource type="MultiMesh" id=2]
+color_format = 1
+transform_format = 1
+instance_count = 13
+mesh = ExtResource( 2 )
+transform_array = PoolVector3Array( -0.999993, 0, -0.00377051, 0, 1, 0, 0.00377107, 0, -0.999844, -0.0133719, 0, -7.95482, -0.996508, 0, -0.0834852, 0, 1, 0, 0.0834976, 0, -0.99636, -0.089266, 0, -9.92508, -0.984036, 0, -0.177943, 0, 1, 0, 0.177969, 0, -0.98389, -0.336552, 0, -11.8913, -0.957769, 0, -0.287495, 0, 1, 0, 0.287537, 0, -0.957627, -0.786586, 0, -13.8297, -0.912795, 0, -0.408356, 0, 1, 0, 0.408416, 0, -0.91266, -1.45796, 0, -15.6788, -0.844258, 0, -0.535857, 0, 1, 0, 0.535936, 0, -0.844133, -2.37603, 0, -17.4216, -0.752035, 0, -0.659025, 0, 1, 0, 0.659123, 0, -0.751924, -3.54208, 0, -19.006, -0.641417, 0, -0.767079, 0, 1, 0, 0.767192, 0, -0.641322, -4.93923, 0, -20.3914, -0.521821, 0, -0.852928, 0, 1, 0, 0.853055, 0, -0.521744, -6.53603, 0, -21.5534, -0.402761, 0, -0.915169, 0, 1, 0, 0.915305, 0, -0.402701, -8.28631, 0, -22.481, -0.290637, 0, -0.956692, 0, 1, 0, 0.956833, 0, -0.290594, -10.1377, 0, -23.1771, -0.185911, 0, -0.982421, 0, 1, 0, 0.982566, 0, -0.185884, -12.0613, 0, -23.6592, -0.08459, 0, -0.996268, 0, 1, 0, 0.996415, 0, -0.0845775, -14.0199, 0, -23.9373 )
+color_array = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+
+[node name="PathMultiMesh" type="Spatial"]
+script = ExtResource( 1 )
+m = ExtResource( 2 )
+
+[node name="Path" type="Path" parent="."]
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( -0.993989, 0, -0.10946, 0, 1, 0, 0.109476, 0, -0.993842, -0.142497, 0, -10.5014 )
+offset = 2.56
+rotation_mode = 4
+
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
+multimesh = SubResource( 2 )
+
+[connection signal="curve_changed" from="Path" to="." method="_on_Path_curve_changed"]
