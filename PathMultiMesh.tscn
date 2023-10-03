@@ -1,35 +1,34 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://d24mw3rgry3yb"]
 
-[ext_resource path="res://PathMultiMesh.gd" type="Script" id=1]
-[ext_resource path="res://rect.obj" type="ArrayMesh" id=2]
+[ext_resource type="Script" path="res://PathMultiMesh.gd" id="1"]
+[ext_resource type="ArrayMesh" uid="uid://cpbsjm60m45nm" path="res://rect.obj" id="2"]
 
-[sub_resource type="Curve3D" id=1]
+[sub_resource type="Curve3D" id="1"]
 _data = {
-"points": PoolVector3Array( 0, 0, 16, 0, 0, -16, 0, 0, -8, 0, 0, 0, 0, 0, 0, -16, 0, -24 ),
-"tilts": PoolRealArray( 0, 0 )
+"points": PackedVector3Array(0, 0, 16, 0, 0, -16, 0, 0, 0, 0, 0, 0, 0, 0, 0, -16, 0, -16),
+"tilts": PackedFloat32Array(0, 0)
 }
+point_count = 2
 
-[sub_resource type="MultiMesh" id=2]
-color_format = 1
+[sub_resource type="MultiMesh" id="MultiMesh_4kbyx"]
 transform_format = 1
 instance_count = 13
-mesh = ExtResource( 2 )
-transform_array = PoolVector3Array( -0.995449, 0, -0.0952758, 0, 0.999999, 0, 0.0952912, 0, -0.995289, -0.0878286, 0, -9.99447, -0.979618, 0, -0.200838, 0, 0.999999, 0, 0.20087, 0, -0.97946, -0.369247, 0, -11.9619, -0.947207, 0, -0.320571, 0, 0.999999, 0, 0.320622, 0, -0.947055, -0.876736, 0, -13.8954, -0.893031, 0, -0.449922, 0, 0.999999, 0, 0.449995, 0, -0.892887, -1.63785, 0, -15.7554, -0.815944, 0, -0.578037, 0, 0.999999, 0, 0.57813, 0, -0.815813, -2.65377, 0, -17.4756, -0.719365, 0, -0.694521, 0, 0.999999, 0, 0.694633, 0, -0.719249, -3.91511, 0, -19.0203, -0.610673, 0, -0.791755, 0, 0.999999, 0, 0.791883, 0, -0.610575, -5.40019, 0, -20.3664, -0.500477, 0, -0.86561, 0, 0.999999, 0, 0.86575, 0, -0.500396, -7.04701, 0, -21.4835, -0.3938, 0, -0.919048, 0, 0.999999, 0, 0.919196, 0, -0.393736, -8.83195, 0, -22.3884, -0.294295, 0, -0.955561, 0, 0.999999, 0, 0.955715, 0, -0.294248, -10.7045, 0, -23.0848, -0.200437, 0, -0.979549, 0, 0.999999, 0, 0.979707, 0, -0.200404, -12.6391, 0, -23.5882, -0.104961, 0, -0.994316, 0, 0.999999, 0, 0.994476, 0, -0.104944, -14.6117, 0, -23.9045, -0.999544, 0, -0.0301802, 0, 0.999999, 0, 0.030185, 0, -0.999383, -0.00773972, 0, -8.60435 )
-color_array = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+mesh = ExtResource("2")
+buffer = PackedFloat32Array(1, 0, 0, 0, 0, 1.00559, 0, 0, 0, 0, 1, 0, 0.996102, 0, 0.0882125, -0.0838525, 0, 1.00559, 0, 0, -0.0882125, 0, 0.996102, -1.95012, 0.981663, 0, 0.190622, -0.353742, 0, 1.00559, 0, 0, -0.190622, 0, 0.981663, -3.88301, 0.951919, 0, 0.306348, -0.836947, 0, 1.00559, 0, 0, -0.306348, 0, 0.951919, -5.77354, 0.90225, 0, 0.431213, -1.55603, 0, 1.00559, 0, 0, -0.431213, 0, 0.90225, -7.58715, 0.830418, 0, 0.557141, -2.52153, 0, 1.00559, 0, 0, -0.557141, 0, 0.830418, -9.2822, 0.738835, 0, 0.673887, -3.7256, 0, 1.00559, 0, 0, -0.673887, 0, 0.738835, -10.8169, 0.634549, 0, 0.772882, -5.14135, 0, 1.00559, 0, 0, -0.772882, 0, 0.634549, -12.159, 0.526275, 0, 0.850314, -6.72954, 0, 1.00559, 0, 0, -0.850314, 0, 0.526275, -13.2922, 0.42088, 0, 0.907116, -8.44831, 0, 1.00559, 0, 0, -0.907116, 0, 0.42088, -14.216, 0.321779, 0, 0.946815, -10.2608, 0, 1.00559, 0, 0, -0.946815, 0, 0.321779, -14.9399, 0.228863, 0, 0.973459, -12.1371, 0, 1.00559, 0, 0, -0.973459, 0, 0.228863, -15.4766, 0.137791, 0, 0.990461, -14.0559, 0, 1.00559, 0, 0, -0.990461, 0, 0.137791, -15.835)
 
-[node name="PathMultiMesh" type="Spatial"]
-script = ExtResource( 1 )
-m = ExtResource( 2 )
+[node name="PathMultiMesh" type="Node3D"]
+script = ExtResource("1")
+m = ExtResource("2")
 
-[node name="Path" type="Path" parent="."]
-curve = SubResource( 1 )
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("1")
 
-[node name="PathFollow" type="PathFollow" parent="Path"]
-transform = Transform( -0.999544, 0, -0.0301802, 0, 0.999999, 0, 0.030185, 0, -0.999383, -0.00773972, 0, -8.60435 )
-offset = 0.607294
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.137791, 0, 0.990461, 0, 1.00559, 0, -0.990461, 0, 0.137791, -14.0559, 0, -15.835)
+progress = 23.4296
 rotation_mode = 4
 
-[node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-multimesh = SubResource( 2 )
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_4kbyx")
 
-[connection signal="curve_changed" from="Path" to="." method="_on_Path_curve_changed"]
+[connection signal="curve_changed" from="Path3D" to="." method="_on_Path_curve_changed"]
