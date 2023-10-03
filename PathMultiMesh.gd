@@ -38,7 +38,7 @@ func calculate_curve_array():
 		
 		# follow along path and set MultiMesh Transforms accordingly
 		for i in range(0, count):
-			path_follow.progress_ratio = i / count
+			path_follow.progress_ratio = (i + 0.5) / count
 			var pf_t = path_follow.transform
 			var t = Transform3D(pf_t)
 			mm.set_instance_transform(i, pf_t)
